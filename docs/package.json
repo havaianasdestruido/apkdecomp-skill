@@ -1,0 +1,32 @@
+{
+  "name": "apkdecomp-documentation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Docusaurus documentation for the APKDecomp agent skill",
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start --host 0.0.0.0",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve --host 0.0.0.0",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids"
+  },
+  "dependencies": {
+    "@docusaurus/core": "3.10.2",
+    "@docusaurus/preset-classic": "3.10.2",
+    "@docusaurus/theme-mermaid": "3.10.2",
+    "@easyops-cn/docusaurus-search-local": "0.55.3",
+    "@mdx-js/react": "3.1.1",
+    "@mermaid-js/layout-elk": "0.1.9",
+    "clsx": "2.1.1",
+    "prism-react-renderer": "2.4.1",
+    "react": "19.2.0",
+    "react-dom": "19.2.0"
+  },
+  "engines": {
+    "node": ">=20.0"
+  }
+}

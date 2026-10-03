@@ -1,0 +1,26 @@
+title: APKDecomp Skill
+description: A careful, tool-aware workflow for authorized Android package analysis.
+url: "https://havaianasdestruido.github.io"
+baseurl: "/apkdecomp-skill"
+repository_url: "https://github.com/havaianasdestruido/apkdecomp-skill"
+license_url: "https://github.com/havaianasdestruido/apkdecomp-skill/blob/main/LICENSE"
+
+markdown: kramdown
+permalink: pretty
+strict_front_matter: true
+
+exclude:
+  - .git
+  - .github
+  - .imgbotconfig
+  - .ruby-version
+  - docs
+  - references
+  - scripts
+  - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - SKILL.md

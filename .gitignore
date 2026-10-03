@@ -1,0 +1,20 @@
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+vendor/
+
+# Docusaurus
+docs/node_modules/
+docs/build/
+docs/.docusaurus/
+docs/.cache-loader/
+
+# Local tooling
+.cache/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.example

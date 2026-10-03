@@ -1,0 +1,19 @@
+---
+layout: default
+title: Page not found
+permalink: /404.html
+body_class: error-page
+---
+<main id="main-content" class="error-shell">
+  <a class="brand" href="{{ '/' | relative_url }}" aria-label="APKDecomp home">
+    <img src="{{ '/assets/img/mark.svg' | relative_url }}" alt="" width="36" height="36">
+    <span>APK<span>Decomp</span></span>
+  </a>
+  <p class="error-code">404 / ROUTE_NOT_FOUND</p>
+  <h1>This path did not survive the decompile.</h1>
+  <p>The page may have moved, or the address may point outside the generated site.</p>
+  <div class="error-actions">
+    <a class="button button--primary" href="{{ '/docs/' | relative_url }}">Search the docs</a>
+    <a class="button button--secondary" href="{{ '/' | relative_url }}">Return home</a>
+  </div>
+</main>
