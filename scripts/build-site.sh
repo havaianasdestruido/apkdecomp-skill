@@ -28,7 +28,7 @@ bundle check >/dev/null || {
 
 rm -rf _site
 bundle exec jekyll build --baseurl "$SITE_BASEURL" --destination "$ROOT_DIR/_site"
-DOCS_BASE_URL="$DOCS_BASE_URL" npm run build --prefix docs
+SITE_BASEURL="$SITE_BASEURL" DOCS_BASE_URL="$DOCS_BASE_URL" npm run build --prefix docs
 
 mkdir -p "$ROOT_DIR/_site/docs"
 cp -a "$ROOT_DIR/docs/build/." "$ROOT_DIR/_site/docs/"

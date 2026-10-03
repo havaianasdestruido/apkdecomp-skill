@@ -19,7 +19,8 @@ Recommended baseline for conventional APKs:
 - [apktool](https://apktool.org/) for resources, manifest, and smali
 - [jadx](https://github.com/skylot/jadx) for Java/Kotlin-like source
 - [APKiD](https://github.com/rednaga/APKiD) for compiler, packer, and obfuscator hints
-- Android SDK Build Tools for `aapt2`, `apkanalyzer`, and `apksigner`
+- Android SDK Build Tools for `aapt2` and `apksigner`
+- Android SDK Command-Line Tools for `apkanalyzer`
 
 Do not install every specialist tool in advance. Add Ghidra, Frida, .NET decompilers, or framework-specific tooling only when fingerprinting points there.
 
@@ -95,6 +96,7 @@ output/
 For an ordinary APK, the minimum evidence-gathering pass is:
 
 ```bash
+mkdir -p output/reports
 unzip -l input/sample.apk | tee output/reports/archive-list.txt
 apkid input/sample.apk | tee output/reports/apkid.txt
 apktool d -f input/sample.apk -o output/apktool

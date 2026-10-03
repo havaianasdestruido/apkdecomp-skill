@@ -1,7 +1,11 @@
 const {themes: prismThemes} = require('prism-react-renderer');
 
 const repositoryUrl = 'https://github.com/havaianasdestruido/apkdecomp-skill';
+const productionSiteUrl = 'https://havaianasdestruido.github.io/apkdecomp-skill/';
 const docsBaseUrl = process.env.DOCS_BASE_URL || '/docs/';
+const siteBaseUrl = process.env.SITE_BASEURL;
+const projectHomeUrl =
+  siteBaseUrl === undefined ? productionSiteUrl : `${siteBaseUrl.replace(/\/+$/, '')}/`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -107,7 +111,7 @@ const config = {
           position: 'left',
         },
         {
-          href: 'https://havaianasdestruido.github.io/apkdecomp-skill/',
+          href: projectHomeUrl,
           label: 'Project home',
           position: 'right',
         },
@@ -140,7 +144,7 @@ const config = {
         {
           title: 'Project',
           items: [
-            {label: 'Project home', href: 'https://havaianasdestruido.github.io/apkdecomp-skill/'},
+            {label: 'Project home', href: projectHomeUrl},
             {label: 'Source code', href: repositoryUrl},
             {label: 'Contribute', to: '/contributing/'},
           ],

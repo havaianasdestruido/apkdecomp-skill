@@ -75,7 +75,7 @@ Capture the exact command and tool versions; runtime APIs evolve.
 After the target has loaded or unpacked the relevant classes, an authorized lab can use a compatible DEX-dumping tool, for example:
 
 ```bash
-frida-dexdump -p <pid>
+frida-dexdump -U -p <pid>
 ```
 
 Then:
