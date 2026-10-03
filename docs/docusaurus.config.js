@@ -5,7 +5,9 @@ const productionSiteUrl = 'https://havaianasdestruido.github.io/apkdecomp-skill/
 const docsBaseUrl = process.env.DOCS_BASE_URL || '/docs/';
 const siteBaseUrl = process.env.SITE_BASEURL;
 const projectHomeUrl =
-  siteBaseUrl === undefined ? productionSiteUrl : `${siteBaseUrl.replace(/\/+$/, '')}/`;
+  siteBaseUrl === undefined
+    ? productionSiteUrl
+    : `pathname://${siteBaseUrl.replace(/\/+$/, '')}/`;
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -114,6 +116,8 @@ const config = {
           href: projectHomeUrl,
           label: 'Project home',
           position: 'right',
+          autoAddBaseUrl: false,
+          target: '_self',
         },
         {
           href: repositoryUrl,
@@ -144,7 +148,12 @@ const config = {
         {
           title: 'Project',
           items: [
-            {label: 'Project home', href: projectHomeUrl},
+            {
+              label: 'Project home',
+              href: projectHomeUrl,
+              autoAddBaseUrl: false,
+              target: '_self',
+            },
             {label: 'Source code', href: repositoryUrl},
             {label: 'Contribute', to: '/contributing/'},
           ],
